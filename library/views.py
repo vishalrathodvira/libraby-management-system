@@ -109,16 +109,17 @@ def addbook_view(request):
             return render(request,'library/bookadded.html')
     return render(request,'library/addbook.html',{'form':form})
 
-
-def stuviewbook_view(request):
-    books=models.Book.objects.all()
-    return render(request,'library/stuviewbook.html',{'books':books})
-
-@login_required(login_url='adminlogin')
-@user_passes_test(is_admin)
+# @login_required(login_url='adminlogin')
+# @user_passes_test(is_admin)
 def viewbook_view(request):
     books=models.Book.objects.all()
     return render(request,'library/viewbook.html',{'books':books})
+
+
+def stviewbook_view(request):
+    books=models.Book.objects.all()
+    return render(request,'library/studentview.html',{'books':books})
+
 
 
 

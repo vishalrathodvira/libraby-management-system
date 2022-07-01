@@ -9,4 +9,3 @@ create your own dataabase
 - And finally, run the application: python manage.py runserver
 
 For Admin Account, please create one with superuser!
-
